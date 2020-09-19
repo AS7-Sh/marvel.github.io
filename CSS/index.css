@@ -1,0 +1,391 @@
+*,*::after,*::before
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+header.main-header
+{
+    height:100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../img/header.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center 55px;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+header.main-header .top-header
+{
+    font-family:cursive;
+    display:flex;
+    justify-content: space-between;
+    padding:15px;
+    overflow:hidden;
+    height:55px;
+    background-color:#ac0303f1;
+}
+
+header.main-header .top-header span
+{
+    font-size:18px;
+}
+
+header.main-header .top-header ul
+{
+    transition:all .5s ease;
+}
+
+header.main-header .top-header ul li
+{
+    display:inline-block;
+    margin-right:16px;
+}
+
+header.main-header .top-header ul li a
+{
+    text-decoration:none;
+    color:#fff;
+    font-size:18px;
+    text-transform: uppercase;
+}
+
+input[type="checkbox"]#nav,label[for="nav"]
+{
+    display:none;
+}
+
+header.main-header .bottom-header
+{
+    position:absolute;
+    height:90vh;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+header.main-header .bottom-header p:nth-child(1)
+{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:5.5em;
+    color:#c90303;
+    margin-bottom:10px;
+}
+
+header.main-header .bottom-header p:nth-child(2)
+{
+    font-size:1.5em;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+header.main-header .bottom-header a
+{
+    padding:10px;
+    background-color:#c90303;
+    color:white;
+    text-decoration: none;
+    width:125px;
+    font-size:1.5em;
+    text-align:center;
+    border-radius:20px;
+}
+
+@media (max-width:630px)
+{
+    header.main-header .top-header span
+    {
+        text-align:left;
+        display:block;
+        width:100%;
+        font-weight:bold;
+    }
+    header.main-header .top-header ul 
+    {
+        right:-100%;
+        position:fixed;
+        top:60px;
+        width:100%;
+    }
+    label[for="nav"]
+    {
+        display:inline-block;
+        font-size:21px;
+        text-align:right;
+    }
+    input[type="checkbox"]:checked ~ ul
+    {
+        right:0;
+
+        background-color:rgba(0, 0, 0, 0.774);
+    }
+    header.main-header .top-header ul li
+    {
+        display:block;
+        width:100%;
+        text-align:center;
+        margin:10px 0 10px 0;
+    }
+}
+
+section.who
+{
+    display:flex;
+    padding:30px;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    max-width:1200px;
+    margin:auto;
+}
+
+section.who p
+{
+    flex-basis:63%;
+    font-size:1.2em;
+    margin-top:40px;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.4em;
+    text-align:center;
+}
+
+section.who div
+{
+    flex-basis:35%;
+    overflow:hidden;
+    padding:3px;
+    height:200px;
+    border:1px solid #000;
+    border-radius:5px;
+}
+
+section.who div img
+{
+    width:100%;
+    height:100%;
+}
+
+
+@media(max-width:800px)
+{
+    section.who
+    {
+        flex-direction: column;
+        padding:0;
+        padding:15px;
+    }
+    section.who p,section.who div
+    {
+        flex-basis:20%;
+    }
+    section.who p
+    {
+        margin-top:15px;
+    }
+}
+
+section.top
+{
+    padding:15px;
+    background-color:#eee;
+    text-align:center;
+}
+
+section.top2
+{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: space-around;
+}
+
+
+section.top h1
+{
+    margin-bottom:15px;
+}
+
+section.top article
+{
+    flex-basis:31%;
+    border:1px solid rgb(119, 119, 119);
+    padding:10px 0 10px 0;
+    border-radius:20px;
+}
+
+section.top article img
+{
+    width:90%;
+    height:500px;
+    max-width:600px
+}
+
+@media(max-width:900px)
+{
+    section.top2 
+    {
+        flex-direction: column;
+    }
+    section.top article
+    {
+        flex-basis: 90%;
+        margin-bottom:15px;
+    }
+    section.top article:nth-child(3)
+    {
+        margin-bottom:0;
+    }
+}
+
+section.oscars
+{
+    padding:30px;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../img/oscar.jpg");
+    background-size:cover;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-position: top;
+}
+
+section.oscars p,section.oscars h1
+{
+    margin-bottom:20px;
+}
+
+section.oscars p
+{
+    line-height:1.4em;
+    font-size:1.1em;
+}
+
+section.oscar2
+{
+    display:flex;
+    justify-content: space-around;
+}
+
+section.oscar2 li
+{
+    list-style-position: inside;
+    font-size:1.2em;
+    margin-bottom:15px;
+    text-align:left;
+}
+
+section.oscar2 li:first-child
+{
+    list-style: none;
+    padding:5px;
+    background-color:#ffd900b7	;
+    width:100px;
+    margin:auto;
+    border-radius:10px;
+    text-align: center;
+    margin-bottom:15px;
+}
+
+@media (max-width:640px)
+{
+    section.oscar2 
+    {
+        flex-direction:column;
+    }
+    section.oscar2 ul 
+    {
+        margin:auto;
+    }
+    section.oscar2 ul:first-child
+    {
+        margin-bottom:10px;
+    }
+
+}
+
+section.rip
+{
+    background:#eee;
+    padding:15px;
+}
+
+section.rip h1
+{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+section.rip article
+{
+    display: flex;
+    justify-content: space-around;
+    perspective: 600px;;
+}
+section.rip article p
+{
+    flex-basis:40%;
+    font-size:1.2em;
+    line-height:1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+section.rip p.rip
+{
+    font-size:3em;
+    font-weight: bold;
+    margin:10px 0 10px 0;
+    text-align:center;
+}
+
+section.rip p.rip span
+{
+    animation:rip 3s ease infinite;
+    display: inline-block;
+    margin-right:20px;
+}
+
+section.rip p.rip span:nth-child(2)
+{
+    animation-delay:0.6s;
+}
+
+section.rip p.rip span:nth-child(3)
+{
+    animation-delay:0.9s;
+}
+
+@keyframes rip
+{
+    100%
+    {
+        opacity: 0.2;
+        transform: rotatex(360deg);
+    }
+}
+
+@media(max-width:640px)
+{
+    section.rip article
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    section.rip article p:first-child
+    {
+        margin-bottom:15px;
+    }
+
+}
+
+
+footer
+{
+    text-align:center;
+    padding:10px;
+    color:#fff;
+    font-size:1.1em;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #000;
+}
